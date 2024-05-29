@@ -1,0 +1,17 @@
+SHOW USER; -> 나의 현 계정 확인
+--> " " : 나의 현 계정이 공백인 상태 의미
+
+CONN SYSTEM / 12345;
+--> SYSTEM계정(오라클 관리자계정)으로 연결
+
+ALTER USER hr IDENTIFIED BY 12345;
+--> hr 계정의 비밀번호를 12345로 변경
+
+ALTER USER hr ACCOUNT UNLOCK;
+--> hr 계정의 잠금 해제
+
+CONN hr / 12345;
+--> hr 계정으로 접속
+
+DESC 테이블이름;
+--> 해당 계정에 있는 테이블의 속성을 조회하는 키워드
